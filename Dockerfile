@@ -18,5 +18,6 @@ FROM eclipse-temurin:11-jre
 # Copy the built JAR from the build stage
 COPY --from=build /app/target/thymeleaf-0.0.1-SNAPSHOT.jar /app.jar
 
+
 # Run the application
 ENTRYPOINT ["java", "-jar", "/app.jar"]
